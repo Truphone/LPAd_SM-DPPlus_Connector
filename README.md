@@ -49,14 +49,14 @@ The following diagram depicts the project high level architecture:
 Maven coordinates to import this lib into your project:
 * Gradle
 ```gradle
-com.truphone.lpad:lpad-sm-dp-plus-connector:1.0.2-SNAPSHOT
+com.truphone.lpad:lpad-sm-dp-plus-connector:1.0.3
 ```
 * Maven
 ```maven
 <dependency>
   <groupId>com.truphone.lpad</groupId>
   <artifactId>lpad-sm-dp-plus-connector</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3</version>
 </dependency>
 
 ```
@@ -71,41 +71,3 @@ String eid = localProfileAssistant.getEID();
 ```
 </br>
 </br>
-
-<h1>APDU Channel Simulator</h1>
-
-This component implements the APDU Channel interface which can be used to create E2E tests dynamically without depending on a specific APDU Channel implementation.
-
-</br>
-<h2> Usage</h2>
-
-Maven coordinates to import this lib into your project:
-* Gradle
-```gradle
-com.truphone.lpad:apdu-channel-simulator:1.0.2-SNAPSHOT
-```
-* Maven
-```maven
-<dependency>
-  <groupId>com.truphone.lpad</groupId>
-  <artifactId>apdu-channel-simulator</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
-</dependency>
-```
-
-The modo-operandis is first of all define the expectation result for the operation you want to invoke, and then perform the invocation.
-
-Examples:
-* TransmitAPDU
-```java
-
-// initialization
-LpadApduChannelSimulator lpadApduChannelSimulator = new LpadApduChannelSimulator(new MapPersistence(new HashMap()));
-
-// first you need to define the expectation
-lpadApduChannelSimulator.setTransmitAPDUExpectation("APDU_SUCCESS", "asdsdasd23123easd");
-
-// then invoke the 'TransmitAPDU' operation which will return the value defined on the expectation
-assertEquals("asdsdasd23123easd", lpadApduChannelSimulator.transmitAPDU("APDU_SUCCESS"));
-
-```
