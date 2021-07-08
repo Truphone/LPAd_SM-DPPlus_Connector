@@ -49,14 +49,14 @@ The following diagram depicts the project high level architecture:
 Maven coordinates to import this lib into your project:
 * Gradle
 ```gradle
-com.truphone.lpad:lpad-sm-dp-plus-connector:1.0.2-SNAPSHOT
+com.truphone.lpad:lpad-sm-dp-plus-connector:1.0.4
 ```
 * Maven
 ```maven
 <dependency>
   <groupId>com.truphone.lpad</groupId>
   <artifactId>lpad-sm-dp-plus-connector</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.4</version>
 </dependency>
 
 ```
@@ -89,14 +89,14 @@ This component implements the APDU Channel interface which can be used to create
 Maven coordinates to import this lib into your project:
 * Gradle
 ```gradle
-com.truphone.lpad:apdu-channel-simulator:1.0.2-SNAPSHOT
+com.truphone.lpad:apdu-channel-simulator:1.0.4
 ```
 * Maven
 ```maven
 <dependency>
   <groupId>com.truphone.lpad</groupId>
   <artifactId>apdu-channel-simulator</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
