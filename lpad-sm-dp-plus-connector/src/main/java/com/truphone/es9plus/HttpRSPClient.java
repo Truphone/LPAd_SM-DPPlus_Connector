@@ -22,11 +22,10 @@ public class HttpRSPClient {
                                          final String url) throws Exception {
 
         Pair<String, String> contentType = new Pair<>("Content-Type", "application/json");
-        Pair<String, String> accept = new Pair<>("Accept", "application/json");
         Pair<String, String> userAgent = new Pair<>("User-Agent", "gsma-rsp-com.truphone.lpad");
         Pair<String, String> xAdminProtocol = new Pair<>("X-Admin-Protocol", "gsma/rsp/v2.2.0");
 
-        return invoke("POST", body, rspServerUrl, url, Arrays.asList(contentType, accept, userAgent, xAdminProtocol));
+        return invoke("POST", body, rspServerUrl, url, Arrays.asList(contentType, userAgent, xAdminProtocol));
     }
 
     public HttpResponse clientSimpleRequest(final String body,
